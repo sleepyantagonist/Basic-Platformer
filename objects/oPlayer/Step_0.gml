@@ -42,11 +42,21 @@ y = y + vsp;
 //Animation
 if !(place_meeting(x , y + 1, oWall))
 {
-	sprite_index = sPlayerA;
+	sprite_index = sPlayer;
 	image_speed = 0;
 	if (vsp > 0) image_index = 1; else image_index = 0;
+}
+else
+{
+	image_speed = 1;
+	if (hsp == 0)
 	{
-		image_speed = 1;
-		if (hsp == 0);
+		sprite_index = sPlayer;	
+	}
+	else
+	{
+		sprite_index = sPlayer	
 	}
 }
+
+if (hsp != 0) image_xscale = sign(hsp);
