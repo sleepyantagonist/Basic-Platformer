@@ -13,7 +13,7 @@ hsp = _move * walksp;
 vsp = vsp + grv;
 
 //Jump
-if (place_meeting(x, y + 1, oWall))
+if (place_meeting(x, y + 1, tile_map))
 {
 	currjumps = 0;
 }
@@ -25,9 +25,9 @@ if (key_jump && (currjumps < maxjumps))
 }
 
 // Horizontal collision
-if (place_meeting (x + hsp, y, oWall))
+if (place_meeting (x + hsp, y, tile_map))
 {
-	while (!place_meeting (x + sign(hsp), y, oWall))
+	while (!place_meeting (x + sign(hsp), y, tile_map))
 	{
 		x = x + sign(hsp);
 	}
@@ -36,9 +36,9 @@ if (place_meeting (x + hsp, y, oWall))
 x = x + hsp;
 
 // Vertical collision
-if (place_meeting (x, y + vsp, oWall))
+if (place_meeting (x, y + vsp, tile_map))
 {
-	while (!place_meeting (x, y + sign(vsp), oWall))
+	while (!place_meeting (x, y + sign(vsp), tile_map))
 	{
 		y = y + sign(vsp);
 	}
@@ -47,7 +47,7 @@ if (place_meeting (x, y + vsp, oWall))
 y = y + vsp;
 
 //Animation
-if !(place_meeting(x , y + 1, oWall))
+if !(place_meeting(x , y + 1, tile_map))
 {
 	sprite_index = sPlayer;
 	image_speed = 0;

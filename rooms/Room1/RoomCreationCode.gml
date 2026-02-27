@@ -1,1 +1,1 @@
-instance_create_layer()
+instance_create_layer(32, 352, "Instances", oPlayer);
