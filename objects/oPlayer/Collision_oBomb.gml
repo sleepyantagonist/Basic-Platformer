@@ -1,0 +1,2 @@
+instance_destroy();
+instance_create_layer(32, 352, "Instances", oPlayer);
