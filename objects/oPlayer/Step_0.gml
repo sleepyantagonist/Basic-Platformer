@@ -15,13 +15,13 @@ vsp = vsp + grv;
 //Jump
 if (place_meeting(x, y + 1, tile_map))
 {
-	currjumps = 0;
+	global.currjumps = 0;
 }
 
-if (key_jump && (currjumps < maxjumps))
+if (key_jump && (global.currjumps < global.maxjumps))
 {
 	vsp = -jumpsp;
-	currjumps += 1;
+	global.currjumps += 1;
 }
 
 // Horizontal collision
