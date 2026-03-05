@@ -1,3 +1,5 @@
-global.maxjumps += 1;
-global.currjumps += 1;
-instance_destroy();
+if (global.score > 3000)
+{
+	global.jumpsp += 4;
+	instance_destroy();
+}

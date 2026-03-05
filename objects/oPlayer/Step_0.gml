@@ -20,7 +20,7 @@ if (place_meeting(x, y + 1, tile_map))
 
 if (key_jump && (global.currjumps < global.maxjumps))
 {
-	vsp = -jumpsp;
+	vsp = -global.jumpsp;
 	global.currjumps += 1;
 }
 
